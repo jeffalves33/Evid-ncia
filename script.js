@@ -6,11 +6,11 @@ let corSelecionada = ""
 
 const siteConfig = {
   site: {
-    nome: "Bella Moda",
-    tagline: "Moda feminina exclusiva com renovação semanal",
-    whatsapp: "5511999999999", // SUBSTITUA pelo seu número
-    endereco: "Rua das Flores, 123 - Centro",
-    instagram: "@bellamoda",
+    nome: "Evidência Moda",
+    tagline: "Peças exclusivas semanais. NÃO PERCA TEMPO!",
+    whatsapp: "5527999033630",
+    endereco: "Rua Pelitas, São Marcos III, 32 - Serra Sede",
+    instagram: "@evidenciamodaofc",
   },
 
   produtos: [
@@ -303,10 +303,18 @@ function carregarImagens() {
 // Função para trocar imagem principal
 function trocarImagem(index) {
   imagemAtiva = index
-  document.getElementById("imagem-principal").src = produtoAtual.imagens[index]
+  const imagemPrincipal = document.getElementById("imagem-principal")
+
+  // Efeito de transição suave
+  imagemPrincipal.style.opacity = "0.7"
+
+  setTimeout(() => {
+    imagemPrincipal.src = produtoAtual.imagens[index]
+    imagemPrincipal.style.opacity = "1"
+  }, 150)
 
   // Atualizar thumbnails
-  const thumbnails = document.querySelectorAll(".thumbnail")
+  const thumbnails = document.querySelectorAll("#thumbnails .thumbnail")
   thumbnails.forEach((thumb, i) => {
     if (i === index) {
       thumb.classList.add("active")
@@ -471,3 +479,153 @@ document.addEventListener("DOMContentLoaded", () => {
     carregarProdutoDetalhes()
   }
 })
+
+// Variáveis para o modal
+let modalImagemAtiva = 0
+
+// Função para abrir modal de imagem
+function abrirModal(index) {
+  if (!produtoAtual) return
+
+  modalImagemAtiva = index
+  const modal = new bootstrap.Modal(document.getElementById("imageModal"))
+
+  // Configurar imagem do modal
+  const modalImage = document.getElementById("modal-image")
+  modalImage.src = produtoAtual.imagens[index]
+  modalImage.alt = produtoAtual.nome
+  modalImage.classList.add("modal-fade-in")
+
+  // Atualizar título
+  document.getElementById("modalImageTitle").textContent = produtoAtual.nome
+
+  // Atualizar contador
+  atualizarContador()
+
+  // Criar thumbnails do modal
+  criarThumbnailsModal()
+
+  // Mostrar modal
+  modal.show()
+
+  // Adicionar eventos de teclado
+  document.addEventListener("keydown", handleKeyPress)
+}
+
+// Função para navegar para imagem anterior
+function imagemAnterior() {
+  if (!produtoAtual) return
+
+  modalImagemAtiva = modalImagemAtiva > 0 ? modalImagemAtiva - 1 : produtoAtual.imagens.length - 1
+  atualizarImagemModal()
+}
+
+// Função para navegar para próxima imagem
+function proximaImagem() {
+  if (!produtoAtual) return
+
+  modalImagemAtiva = modalImagemAtiva < produtoAtual.imagens.length - 1 ? modalImagemAtiva + 1 : 0
+  atualizarImagemModal()
+}
+
+// Função para atualizar imagem do modal
+function atualizarImagemModal() {
+  const modalImage = document.getElementById("modal-image")
+
+  // Efeito de fade
+  modalImage.style.opacity = "0.5"
+
+  setTimeout(() => {
+    modalImage.src = produtoAtual.imagens[modalImagemAtiva]
+    modalImage.style.opacity = "1"
+    atualizarContador()
+    atualizarThumbnailsModal()
+  }, 150)
+}
+
+// Função para atualizar contador
+function atualizarContador() {
+  const counter = document.getElementById("image-counter")
+  counter.textContent = `${modalImagemAtiva + 1} de ${produtoAtual.imagens.length}`
+}
+
+// Função para criar thumbnails do modal
+function criarThumbnailsModal() {
+  const modalThumbnails = document.getElementById("modal-thumbnails")
+  modalThumbnails.innerHTML = ""
+
+  produtoAtual.imagens.forEach((imagem, index) => {
+    const img = document.createElement("img")
+    img.src = imagem
+    img.alt = `${produtoAtual.nome} ${index + 1}`
+    img.className = `thumbnail ${index === modalImagemAtiva ? "active" : ""}`
+    img.onclick = () => {
+      modalImagemAtiva = index
+      atualizarImagemModal()
+    }
+    modalThumbnails.appendChild(img)
+  })
+}
+
+// Função para atualizar thumbnails do modal
+function atualizarThumbnailsModal() {
+  const thumbnails = document.querySelectorAll("#modal-thumbnails .thumbnail")
+  thumbnails.forEach((thumb, index) => {
+    if (index === modalImagemAtiva) {
+      thumb.classList.add("active")
+    } else {
+      thumb.classList.remove("active")
+    }
+  })
+}
+
+// Função para lidar com teclas do teclado
+function handleKeyPress(event) {
+  if (document.getElementById("imageModal").classList.contains("show")) {
+    switch (event.key) {
+      case "ArrowLeft":
+        imagemAnterior()
+        break
+      case "ArrowRight":
+        proximaImagem()
+        break
+      case "Escape":
+        const modal = bootstrap.Modal.getInstance(document.getElementById("imageModal"))
+        modal.hide()
+        break
+    }
+  }
+}
+
+// Remover event listener quando modal fechar
+document.getElementById("imageModal").addEventListener("hidden.bs.modal", () => {
+  document.removeEventListener("keydown", handleKeyPress)
+})
+
+// Adicionar suporte a gestos touch para mobile
+let touchStartX = 0
+let touchEndX = 0
+
+document.getElementById("imageModal").addEventListener("touchstart", (event) => {
+  touchStartX = event.changedTouches[0].screenX
+})
+
+document.getElementById("imageModal").addEventListener("touchend", (event) => {
+  touchEndX = event.changedTouches[0].screenX
+  handleSwipe()
+})
+
+function handleSwipe() {
+  const swipeThreshold = 50
+  const diff = touchStartX - touchEndX
+
+  if (Math.abs(diff) > swipeThreshold) {
+    if (diff > 0) {
+      // Swipe left - próxima imagem
+      proximaImagem()
+    } else {
+      // Swipe right - imagem anterior
+      imagemAnterior()
+    }
+  }
+}

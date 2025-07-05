@@ -252,8 +252,195 @@ body {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Imagem Principal do Produto */
+.product-image-main {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  cursor: zoom-in;
+  transition: all 0.3s ease;
+}
+
+.product-image-main:hover {
+  transform: scale(1.02);
+}
+
+@media (min-width: 992px) {
+  .product-image-main {
+    height: 600px;
+  }
+}
+
+/* Botão de Zoom */
+.btn-zoom {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-image-main:hover+.position-absolute .btn-zoom,
+.btn-zoom:hover {
+  opacity: 1;
+}
+
+/* Thumbnails melhorados */
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 2px solid #dee2e6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.thumbnail:hover {
+  border-color: var(--pink-color);
+  transform: scale(1.05);
+}
+
+.thumbnail.active {
+  border-color: var(--pink-color);
+  box-shadow: 0 0 0 2px rgba(236, 72, 153, 0.2);
+}
+
+/* Modal de Imagem */
+.modal-product-image {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Botões de navegação do modal */
+.nav-btn {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  z-index: 1060;
+}
+
+.nav-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Thumbnails do modal */
+#modal-thumbnails .thumbnail {
+  width: 60px;
+  height: 60px;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+#modal-thumbnails .thumbnail:hover,
+#modal-thumbnails .thumbnail.active {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Contador de imagens */
+#image-counter {
+  font-size: 0.9rem;
+  border-radius: 20px;
+}
+
+/* Responsividade do modal */
+@media (max-width: 768px) {
+  .modal-product-image {
+    max-width: 95vw;
+    max-height: 80vh;
+  }
+
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-btn.start-0 {
+    left: 10px !important;
+  }
+
+  .nav-btn.end-0 {
+    right: 10px !important;
+  }
+}
+
+/* Animações */
+.modal-fade-in {
+  animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Melhorar visualização em dispositivos pequenos */
+@media (max-width: 576px) {
+  .product-image-main {
+    height: 400px;
+  }
+
+  .thumbnail {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Indicador de carregamento */
+.loading-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* Efeito de hover na imagem principal */
+.product-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image-container::after {
+  content: "🔍 Clique para ampliar";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: white;
+  text-align: center;
+  padding: 20px 10px 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.product-image-container:hover::after {
+  opacity: 1;
 }
