@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto - Bella Moda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- CSS Customizado -->
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pink: {
+                            50: '#fdf2f8',
+                            100: '#fce7f3',
+                            200: '#fbcfe8',
+                            300: '#f9a8d4',
+                            400: '#f472b6',
+                            500: '#ec4899',
+                            600: '#db2777',
+                            700: '#be185d',
+                            800: '#9d174d',
+                            900: '#831843',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-pink-50 via-white to-purple-50">
+    <!-- Header -->
+    <header class="header-custom sticky-top">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center py-3">
+                <a href="index.html" class="d-flex align-items-center text-decoration-none text-muted hover-pink">
+                    <i class="bi bi-arrow-left me-2"></i>
+                    <span>Voltar</span>
+                </a>
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-stars fs-4 text-pink me-2"></i>
+                    <span class="fw-bold text-pink">Bella Moda</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container py-4">
+        <div class="row g-5">
+            <!-- Galeria de Imagens -->
+            <div class="col-lg-6">
+                <div class="position-relative mb-3">
+                    <img id="imagem-principal" src="/placeholder.svg" alt="" class="img-fluid rounded-3 shadow-lg product-image">
+                    <div id="badges-produto" class="position-absolute top-0 start-0 m-3">
+                        <!-- Badges serão inseridos aqui -->
+                    </div>
+                    <button class="btn btn-light position-absolute top-0 end-0 m-3 rounded-circle btn-heart">
+                        <i class="bi bi-heart"></i>
+                    </button>
+                </div>
+
+                <!-- Thumbnails -->
+                <div id="thumbnails" class="d-flex gap-2 overflow-auto pb-2">
+                    <!-- Thumbnails serão inseridos aqui -->
+                </div>
+            </div>
+
+            <!-- Informações do Produto -->
+            <div class="col-lg-6">
+                <div class="mb-3">
+                    <span id="categoria-badge" class="badge badge-outline-pink mb-3"></span>
+                    <h1 id="nome-produto" class="display-5 fw-bold text-dark mb-3"></h1>
+
+                    <!-- Avaliações -->
+                    <div id="avaliacoes" class="d-flex align-items-center mb-3">
+                        <!-- Avaliações serão inseridas aqui -->
+                    </div>
+
+                    <!-- Preços -->
+                    <div class="d-flex align-items-center gap-3 mb-4">
+                        <span id="preco-atual" class="display-6 fw-bold text-pink"></span>
+                        <span id="preco-original" class="fs-4 text-muted text-decoration-line-through"></span>
+                        <span id="economia" class="badge bg-success"></span>
+                    </div>
+                </div>
+
+                <hr>
+
+                <!-- Seleção de Tamanho -->
+                <div class="mb-4">
+                    <h5 class="fw-semibold mb-3">Tamanho</h5>
+                    <div id="tamanhos" class="d-flex gap-2 flex-wrap">
+                        <!-- Tamanhos serão inseridos aqui -->
+                    </div>
+                </div>
+
+                <!-- Seleção de Cor -->
+                <div class="mb-4">
+                    <h5 class="fw-semibold mb-3">Cor</h5>
+                    <div id="cores" class="d-flex gap-2 flex-wrap">
+                        <!-- Cores serão inseridas aqui -->
+                    </div>
+                </div>
+
+                <hr>
+
+                <!-- Call to Actions -->
+                <div class="d-grid gap-3 mb-4">
+                    <button onclick="comprarWhatsApp()" class="btn btn-success btn-lg">
+                        <i class="bi bi-whatsapp me-2"></i>
+                        Comprar via WhatsApp
+                    </button>
+
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <button class="btn btn-outline-pink w-100">
+                                <i class="bi bi-heart me-2"></i>
+                                Favoritar
+                            </button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-outline-purple w-100">
+                                <i class="bi bi-geo-alt me-2"></i>
+                                Experimentar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefícios -->
+                <div class="card benefits-card mb-4">
+                    <div class="card-body">
+                        <div class="row g-3 text-center">
+                            <div class="col-4">
+                                <i class="bi bi-shield-check text-pink fs-4"></i>
+                                <div class="small">Qualidade Garantida</div>
+                            </div>
+                            <div class="col-4">
+                                <i class="bi bi-geo-alt text-purple fs-4"></i>
+                                <div class="small">Prova na Loja</div>
+                            </div>
+                            <div class="col-4">
+                                <i class="bi bi-clock text-pink fs-4"></i>
+                                <div class="small">Entrega Rápida</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ocasiões -->
+                <div class="mb-4">
+                    <h6 class="fw-semibold mb-2">Ocasiões</h6>
+                    <div id="ocasioes" class="d-flex gap-2 flex-wrap">
+                        <!-- Ocasiões serão inseridas aqui -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Descrição e Detalhes -->
+        <div class="row g-4 mt-4">
+            <div class="col-lg-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">Descrição</h4>
+                        <p id="descricao" class="card-text text-muted"></p>
+                        <p id="descricao-detalhada" class="card-text text-muted"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">Detalhes do Produto</h4>
+                        <ul id="detalhes" class="list-unstyled">
+                            <!-- Detalhes serão inseridos aqui -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Urgência -->
+        <div class="alert alert-warning text-center mt-4 urgency-alert">
+            <div class="d-flex justify-content-center align-items-center mb-2">
+                <i class="bi bi-clock text-danger fs-5 me-2"></i>
+                <strong class="text-danger">Oferta por Tempo Limitado!</strong>
+            </div>
+            <p class="mb-0 text-muted">
+                Esta peça faz parte da nossa coleção semanal exclusiva. Não perca a oportunidade!
+            </p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Inicializar ícones Lucide
+        lucide.createIcons();
+        
+        // Carregar produto na página
+        document.addEventListener('DOMContentLoaded', function() {
+            carregarProdutoDetalhes();
+        });
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

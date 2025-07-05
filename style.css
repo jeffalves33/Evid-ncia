@@ -1,0 +1,259 @@
+/* Cores Customizadas */
+:root {
+  --pink-color: #ec4899;
+  --pink-light: #fdf2f8;
+  --pink-dark: #be185d;
+  --purple-color: #8b5cf6;
+  --purple-light: #f3f4f6;
+  --purple-dark: #7c3aed;
+}
+
+/* Gradientes e Backgrounds */
+body {
+  background: linear-gradient(135deg, var(--pink-light) 0%, #ffffff 50%, #f8fafc 100%);
+  min-height: 100vh;
+}
+
+.text-pink {
+  color: var(--pink-color) !important;
+}
+
+.text-purple {
+  color: var(--purple-color) !important;
+}
+
+/* Header */
+.header-custom {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(236, 72, 153, 0.1);
+}
+
+.logo-text {
+  background: linear-gradient(45deg, var(--pink-color), var(--purple-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Badges */
+.badge-custom {
+  background-color: var(--pink-light);
+  color: var(--pink-dark);
+  border: 1px solid rgba(236, 72, 153, 0.2);
+}
+
+.badge-gradient {
+  background: linear-gradient(45deg, var(--pink-color), var(--purple-color));
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.badge-outline-pink {
+  background: transparent;
+  color: var(--pink-color);
+  border: 1px solid var(--pink-color);
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 4rem 0;
+}
+
+.hero-title {
+  background: linear-gradient(45deg, var(--pink-color), var(--purple-color), var(--pink-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+}
+
+/* Product Cards */
+.product-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  border: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.product-image {
+  transition: transform 0.5s ease;
+  height: 300px;
+  object-fit: cover;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.1);
+}
+
+.product-card .card-body h5:hover {
+  color: var(--pink-color);
+}
+
+/* Buttons */
+.btn-pink {
+  background: linear-gradient(45deg, var(--pink-color), var(--pink-dark));
+  border: none;
+  color: white;
+}
+
+.btn-pink:hover {
+  background: linear-gradient(45deg, var(--pink-dark), var(--pink-color));
+  color: white;
+}
+
+.btn-outline-pink {
+  border-color: var(--pink-color);
+  color: var(--pink-color);
+}
+
+.btn-outline-pink:hover {
+  background-color: var(--pink-color);
+  border-color: var(--pink-color);
+  color: white;
+}
+
+.btn-outline-purple {
+  border-color: var(--purple-color);
+  color: var(--purple-color);
+}
+
+.btn-outline-purple:hover {
+  background-color: var(--purple-color);
+  border-color: var(--purple-color);
+  color: white;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(45deg, var(--pink-color), var(--purple-color), var(--pink-color));
+}
+
+/* Size and Color Selection */
+.size-btn,
+.color-btn {
+  border: 2px solid #dee2e6;
+  background: white;
+  color: #6c757d;
+  transition: all 0.3s ease;
+}
+
+.size-btn:hover,
+.color-btn:hover {
+  border-color: var(--pink-color);
+  color: var(--pink-color);
+}
+
+.size-btn.active,
+.color-btn.active {
+  border-color: var(--pink-color);
+  background-color: var(--pink-light);
+  color: var(--pink-color);
+}
+
+/* Benefits Card */
+.benefits-card {
+  background: linear-gradient(45deg, var(--pink-light), #f8fafc);
+  border: 1px solid rgba(236, 72, 153, 0.1);
+}
+
+/* Urgency Alert */
+.urgency-alert {
+  background: linear-gradient(45deg, #fef3cd, #fce7f3);
+  border: 1px solid #f59e0b;
+}
+
+/* Thumbnails */
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 2px solid #dee2e6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.thumbnail:hover {
+  border-color: var(--pink-color);
+}
+
+.thumbnail.active {
+  border-color: var(--pink-color);
+}
+
+/* Heart Button */
+.btn-heart {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-heart:hover {
+  color: var(--pink-color);
+  background-color: white;
+}
+
+/* Hover Effects */
+.hover-pink:hover {
+  color: var(--pink-color) !important;
+}
+
+/* Stars */
+.star-filled {
+  color: #ffc107;
+}
+
+.star-empty {
+  color: #dee2e6;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .hero-section {
+    padding: 2rem 0;
+  }
+
+  .product-image {
+    height: 250px;
+  }
+
+  .display-6 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Animation for loading */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
