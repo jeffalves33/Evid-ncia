@@ -16,177 +16,126 @@ const siteConfig = {
   produtos: [
     {
       id: 1,
-      nome: "Vestido Midi Floral Primavera",
+      nome: "Vestido Estampa Animal Print",
       categoria: "Vestidos",
-      preco: 189.9,
-      precoOriginal: 249.9,
-      desconto: 24,
-      novo: true,
+      preco: 124.99,
+      precoOriginal: 156.99,
+      desconto: 20,
+      novo: false,
       destaque: true,
       imagens: [
-        "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=500&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1566479179817-c0b5b4b4b1e8?w=500&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=500&h=700&fit=crop",
+        "https://res.cloudinary.com/dpnqxj57j/image/upload/v1751892333/IMG_8887_d5k2ve.jpg",
+        "https://res.cloudinary.com/dpnqxj57j/image/upload/v1751892334/IMG_8883_rh6cwy.jpg",
+        "https://res.cloudinary.com/dpnqxj57j/image/upload/v1751892334/IMG_8884_b69kf9.jpg",
       ],
-      imagemPrincipal: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=500&fit=crop",
+      imagemPrincipal: "https://res.cloudinary.com/dpnqxj57j/image/upload/v1751892333/IMG_8887_d5k2ve.jpg",
       descricao:
-        "Vestido midi com estampa floral delicada, perfeito para a primavera. Confeccionado em tecido fluido de alta qualidade, com caimento impecável que valoriza a silhueta feminina.",
-      descricaoDetalhada:
-        "Este vestido midi é a peça perfeita para quem busca elegância e conforto. A estampa floral exclusiva foi desenvolvida especialmente para nossa coleção, trazendo um toque romântico e sofisticado.",
+        "O vestido tem estampa animal print de oncinha em tons de marrom e preto, com mangas longas e uma amarração na cintura. A estampa animal print surgiu há muitos séculos. Antigamente, peles de animais eram usadas por reis e nobres como símbolo de poder, riqueza e status. Na moda, ela ganhou força nos anos 40 e voltou com tudo nas décadas de 60, 80 e 2000, sendo constantemente reinventada.",
       detalhes: [
-        "Tecido: Crepe georgette premium",
-        "Forro: 100% viscose",
-        "Comprimento: Midi (altura do joelho)",
-        "Modelagem: Solta, com amarração na cintura",
-        "Cuidados: Lavar à mão ou lavagem delicada",
-        "Origem: Confecção nacional",
+        "Estampa: Animal print de oncinha",
+        "Cor: Tons de marrom e preto",
+        "Mangas: Longas",
+        "Cintura: Marcada com cinto preto fino",
+        "Comprimento: Acima do joelho",
+        "Estilo: Versátil, pode ser usado casualmente ou em ocasiões mais arrumadas",
       ],
-      tamanhos: ["P", "M", "G", "GG"],
-      cores: ["Floral Rosa", "Floral Azul", "Floral Verde"],
+      tamanhos: ["EXG ao G2"],
+      cores: ["Nude com Preto"],
       avaliacoes: { nota: 4.8, total: 127 },
-      ocasioes: ["Trabalho", "Encontros", "Eventos casuais", "Passeios"],
+      ocasioes: ["Outono/Inverno", "Eventos sociais", "Eventos casuais"],
     },
     {
       id: 2,
-      nome: "Blusa Cropped Renda Delicada",
-      categoria: "Blusas",
-      preco: 89.9,
-      precoOriginal: 119.9,
-      desconto: 25,
+      nome: "Vestido Estampado Manga Longa",
+      categoria: "Vestidos",
+      preco: 124.99,
+      precoOriginal: 156.99,
+      desconto: 20,
       novo: false,
       destaque: true,
       imagens: [
-        "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=500&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=500&h=700&fit=crop",
+        "https://res.cloudinary.com/dpnqxj57j/image/upload/v1751893496/IMG_8878_ygl4bl.jpg",
+        "https://res.cloudinary.com/dpnqxj57j/image/upload/v1751893497/IMG_8879_ra9qk2.jpg",
       ],
-      imagemPrincipal: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&h=500&fit=crop",
+      imagemPrincipal: "https://res.cloudinary.com/dpnqxj57j/image/upload/v1751893496/IMG_8878_ygl4bl.jpg",
       descricao:
-        "Blusa cropped em renda delicada com forro interno. Peça versátil que combina com saias, calças e shorts.",
-      descricaoDetalhada: "Nossa blusa cropped em renda é a combinação perfeita entre delicadeza e modernidade.",
+        "Delicadeza que valoriza! Vestido com mangas longas e punho com elástico, botões frontais (fake) e estampa floral apaixonante! Confortável, elegante e perfeito para todas as estações!",
       detalhes: [
-        "Material: Renda francesa + forro viscose",
-        "Modelagem: Cropped ajustado",
-        "Manga: Curta com acabamento em renda",
-        "Fechamento: Zíper invisível nas costas",
-        "Cuidados: Lavagem delicada",
+        "Cor: Nude",
+        "Estampa: Floral em tons de amarelo e branco",
+        "Mangas: Longas com volume e punho elástico",
+        "Decote: V com botões frontais",
+        "Comprimento: Acima do joelho",
+        "Modelagem: Solta"
       ],
-      tamanhos: ["P", "M", "G"],
-      cores: ["Branco", "Off-white", "Nude"],
+      tamanhos: ["EXG ao G2"],
+      cores: ["Nude", "Off-white"],
       avaliacoes: { nota: 4.6, total: 89 },
-      ocasioes: ["Trabalho", "Balada", "Encontros", "Eventos"],
+      ocasioes: ["Casual", "Dia a Dia", "Passeios", "Encontros"],
     },
     {
       id: 3,
-      nome: "Saia Plissada Alta Costura",
-      categoria: "Saias",
-      preco: 129.9,
-      precoOriginal: 169.9,
+      nome: "Vestido Canelado",
+      categoria: "Vestidos",
+      preco: 159.99,
+      precoOriginal: 177.99,
       desconto: 24,
       novo: true,
       destaque: true,
       imagens: [
-        "https://images.unsplash.com/photo-1583496661160-fb5886a13d27?w=500&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=500&h=700&fit=crop",
+        "https://res.cloudinary.com/dpnqxj57j/image/upload/v1751894125/IMG_8655_q3kix3.jpg",
+        "https://res.cloudinary.com/dpnqxj57j/image/upload/v1751894124/IMG_8653_oop6jr.jpg",
+        "https://res.cloudinary.com/dpnqxj57j/image/upload/v1751894133/IMG_8639_1_dmgihd.jpg",
+        "https://res.cloudinary.com/dpnqxj57j/image/upload/v1751894124/IMG_8631_nnw7zu.jpg",
       ],
-      imagemPrincipal: "https://images.unsplash.com/photo-1583496661160-fb5886a13d27?w=400&h=500&fit=crop",
-      descricao: "Saia plissada com pregas marcadas e caimento perfeito. Cintura alta que alonga a silhueta.",
-      descricaoDetalhada: "Esta saia plissada é uma verdadeira obra de arte da costura.",
+      imagemPrincipal: "https://res.cloudinary.com/dpnqxj57j/image/upload/v1751894125/IMG_8655_q3kix3.jpg",
+      descricao: "O marrom é a cor do momento, e esse vestido é a definição de elegância! Longo tubinho com fendas laterais, mangas compridas e gola alta que valoriza e alonga a silhueta. Um look versátil, quentinho e estiloso para os dias mais fresquinhos!",
       detalhes: [
-        "Tecido: Crepe premium com elastano",
-        "Modelagem: Cintura alta",
-        "Comprimento: Midi (abaixo do joelho)",
-        "Pregas: Marcadas e fixadas",
-        "Fechamento: Zíper lateral invisível",
+        "Cor: Marrom (ou marrom chocolate)",
+        "Tecido: Canelado (com textura em relevo)",
+        "Decote: Gola alta",
+        "Mangas: Longas",
+        "Comprimento: Midi (abaixo do joelho, cobrindo as panturrilhas)",
+        "Modelagem: Ajustada ao corpo",
+        "Detalhe: Fenda lateral (visível em parte)"
       ],
-      tamanhos: ["P", "M", "G", "GG"],
-      cores: ["Preto", "Marinho", "Caramelo", "Vinho"],
+      tamanhos: ["P", "M"],
+      cores: ["Marrom"],
       avaliacoes: { nota: 4.9, total: 156 },
-      ocasioes: ["Trabalho", "Eventos formais", "Reuniões", "Jantares"],
+      ocasioes: ["Outono/Inverno", "Jantares", "Eventos sociais", "Casual elegante"],
     },
     {
       id: 4,
-      nome: "Conjunto Blazer + Short Executivo",
-      categoria: "Conjuntos",
-      preco: 259.9,
-      precoOriginal: 329.9,
-      desconto: 21,
-      novo: false,
-      destaque: true,
-      imagens: [
-        "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=500&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=500&h=700&fit=crop",
-      ],
-      imagemPrincipal: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=500&fit=crop",
-      descricao: "Conjunto executivo moderno com blazer estruturado e short alfaiataria.",
-      descricaoDetalhada: "Este conjunto representa o equilíbrio perfeito entre profissionalismo e modernidade.",
-      detalhes: [
-        "Blazer: Alfaiataria com forro completo",
-        "Short: Cintura alta com pregas frontais",
-        "Tecido: Gabardine stretch premium",
-        "Botões: Madrepérola natural",
-        "Bolsos: Funcionais no blazer",
-      ],
-      tamanhos: ["P", "M", "G", "GG"],
-      cores: ["Preto", "Marinho", "Cinza", "Bege"],
-      avaliacoes: { nota: 4.7, total: 203 },
-      ocasioes: ["Trabalho", "Reuniões", "Apresentações", "Eventos corporativos"],
-    },
-    {
-      id: 5,
-      nome: "Body Manga Longa Elegante",
-      categoria: "Bodies",
-      preco: 79.9,
-      precoOriginal: 99.9,
-      desconto: 20,
+      nome: "Sobretudo",
+      categoria: "Vestidos",
+      preco: 169.99,
+      precoOriginal: 178.99,
+      desconto: 5,
       novo: true,
       destaque: true,
       imagens: [
-        "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=500&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1566479179817-c0b5b4b4b1e8?w=500&h=700&fit=crop",
+        "https://res.cloudinary.com/dpnqxj57j/image/upload/v1751894568/IMG_8875_uauyml.jpg",
+        "https://res.cloudinary.com/dpnqxj57j/image/upload/v1751894568/IMG_8872_gayncp.jpg",
+        "https://res.cloudinary.com/dpnqxj57j/image/upload/v1751894568/IMG_8873_bdogja.jpg",
+        "https://res.cloudinary.com/dpnqxj57j/image/upload/v1751894784/IMG_8913_aqvlwz.jpg",
+        "https://res.cloudinary.com/dpnqxj57j/image/upload/v1751894784/IMG_8899_k9kzfp.jpg",
+        "https://res.cloudinary.com/dpnqxj57j/image/upload/v1751894784/IMG_8901_w5grk0.jpg",
       ],
-      imagemPrincipal: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=400&h=500&fit=crop",
-      descricao:
-        "Body manga longa com gola alta e fechamento discreto. Tecido com elastano para perfeito ajuste ao corpo.",
-      descricaoDetalhada: "Este body é a peça coringa do seu guarda-roupa.",
+      imagemPrincipal: "https://res.cloudinary.com/dpnqxj57j/image/upload/v1751894568/IMG_8875_uauyml.jpg",
+      descricao: "Versatilidade com elegância! Esse vestido é aquele modelo inteligente e fashion, que pode ser usado tanto fechado como vestido, quanto aberto como sobretudo.",
       detalhes: [
-        "Tecido: Viscose com elastano",
-        "Gola: Alta e ajustada",
-        "Manga: Longa com punho ajustado",
-        "Fechamento: Colchetes na parte inferior",
-        "Modelagem: Justa ao corpo",
+        "Babado nos ombros",
+        "Manga longa com elástico no punho",
+        "Gola alta",
+        "Botões frontais",
+        "Fenda frontal",
+        "Cinto do mesmo tecido que valoriza a silhueta",
+        "Estampa em riscas verticais, que alongam o corpo com sofisticação.",
       ],
-      tamanhos: ["P", "M", "G"],
-      cores: ["Preto", "Branco", "Nude", "Vinho"],
-      avaliacoes: { nota: 4.5, total: 78 },
-      ocasioes: ["Trabalho", "Casual", "Balada", "Sobreposição"],
-    },
-    {
-      id: 6,
-      nome: "Calça Wide Leg Premium",
-      categoria: "Calças",
-      preco: 149.9,
-      precoOriginal: 199.9,
-      desconto: 25,
-      novo: false,
-      destaque: true,
-      imagens: [
-        "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=500&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1583496661160-fb5886a13d27?w=500&h=700&fit=crop",
-      ],
-      imagemPrincipal: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=500&fit=crop",
-      descricao: "Calça wide leg de cintura alta com caimento fluido. Modelagem que alonga a silhueta.",
-      descricaoDetalhada: "Nossa calça wide leg é sinônimo de elegância e conforto.",
-      detalhes: [
-        "Tecido: Crepe com elastano",
-        "Modelagem: Wide leg, cintura alta",
-        "Comprimento: Longo (até o chão)",
-        "Bolsos: Laterais funcionais",
-        "Fechamento: Zíper lateral + botão",
-      ],
-      tamanhos: ["P", "M", "G", "GG"],
-      cores: ["Preto", "Caramelo", "Verde Militar", "Terracota"],
-      avaliacoes: { nota: 4.8, total: 134 },
-      ocasioes: ["Trabalho", "Casual chic", "Eventos", "Viagens"],
+      tamanhos: ["GG"],
+      cores: ["Marrom", "Preto"],
+      avaliacoes: { nota: 4.7, total: 203 },
+      ocasioes: ["Trabalho", "Reuniões", "Apresentações", "Eventos corporativos"],
     },
   ],
 }
@@ -267,7 +216,7 @@ function carregarProdutoDetalhes() {
 
   // Preencher descrições
   document.getElementById("descricao").textContent = produtoAtual.descricao
-  document.getElementById("descricao-detalhada").textContent = produtoAtual.descricaoDetalhada
+  //document.getElementById("descricao-detalhada").textContent = produtoAtual.descricaoDetalhada
 
   // Carregar componentes
   carregarImagens()
@@ -447,6 +396,24 @@ function comprarWhatsApp() {
   if (!produtoAtual) return
 
   let mensagem = `Olá! Tenho interesse no produto: ${produtoAtual.nome} - R$ ${produtoAtual.preco.toFixed(2).replace(".", ",")}`
+
+  if (tamanhoSelecionado) {
+    mensagem += ` - Tamanho: ${tamanhoSelecionado}`
+  }
+
+  if (corSelecionada) {
+    mensagem += ` - Cor: ${corSelecionada}`
+  }
+
+  const url = `https://wa.me/${siteConfig.site.whatsapp}?text=${encodeURIComponent(mensagem)}`
+  window.open(url, "_blank")
+}
+
+// Função para experimentar via WhatsApp
+function ExperimentarWhatsApp() {
+  if (!produtoAtual) return
+
+  let mensagem = `Olá! Gostaria de no seu espaço provar esse produto: ${produtoAtual.nome} - R$ ${produtoAtual.preco.toFixed(2).replace(".", ",")}`
 
   if (tamanhoSelecionado) {
     mensagem += ` - Tamanho: ${tamanhoSelecionado}`
